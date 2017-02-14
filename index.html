@@ -1,10 +1,214 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FIRST!</title>
-  </head>
-  <body>
-    <h2>TESTING</h2>
-    <p>Random text goes here.</p>
-  </body>
+<title>Palazzo Bianco Pizzeria</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("pizza1.jpg");
+    min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <ul class="w3-navbar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <li><a href="#">POČETNA</a></li>
+    <li><a href="#menu">PONUDA</a></li>
+    <li><a href="#about">O NAMA</a></li>
+    <li><a href="#googleMap">KONTAKT</a></li>
+  </ul>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Otvoreni od 9:00 do 23:00</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Palazzo<br>Bianco</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Palazzo<br>Bianco</b></span>
+    <p><a href="#menu" class="w3-btn w3-xxlarge w3-padding">Pokaži mi ponudu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">PONUDA</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">O Nama</h1>
+    <p>Datum rođenja: Jednog divnog sunčanog popodneva, četvrtog dana meseca 07. leta Gospodnjeg 2006. 
+</p><p>Mesto rođenja:Jedno od retkih mesta na svetu za koje ne znate da li je lepše zimi, ili leti, danju ili noću,da li Vam je svitanje draže od sumraka, jer je i taj sumrak kao iz bajke... Sokobanja... Pizzeria-Spaghetteria "Palazzo-Bianco"je vrlo brzo, ponudivši nešto kvalitetno, neobično i novo za Sokobanju i čitav region, postala uz banjski lekovit vazduh, prirodu Sokograd, Ozren planinu, kanjon reke Moravice zaštitni znak i brend mesta i čitavog kraja. Naš restoran italijanske kuhinje svojom ponudom zalazi u mešavinu Napuljsko-Sicilijanske kuhinje, nudeći 40 vrsta pizza od pravog pizza testa, 20 vrsta pasti, piletinu pollo, salate(insalata), deo kuhinje smo posvetili vegetarijancima, deo periodu Pravoslavnih postova a sve to prati jako neobična ponuda kvalitetnih rakija i oko 70 vrsta vina od Rajackih Pimnica(Negotin) do Palićkog vinograda lepo klasifikovanih i smeštenih u našu mini Enoteku,kao i neizostavno poglavlje od 30 vrsta začina od kojih 12 gajimo sami u našoj biobašti od marta do novembra!</p><p> E a onda... kako kažu obično sticajem ovakvih i onakvih okolnosti 17.10.2010. u 10h smo sve ovo gore pročitano, uz ogromnu količinu tuge, sete, nostalgije zajedno sa celokupnim životom i profesijom smestili u veliki kamion sa prikolicom i krenuli pravac za Novi Sad.U Novom Sadu, od 26.10.2010. pokušavamo da nastavimo nasu priču, u divnom ambijentu u suterenu, uz iste fotografije na zidovima, iste boje, raspored, istu muziku, ise začine i mirise, a sto je najvažnije još bolju kuhinju... Uz isti scenario i koreografiju, mene koji pišem sve ovo sa ogromnom knedlom u grlu... Zavesu na sceni ponovo dižem, ali čak ni kao vrhunski reditelj ne mogu znati koliko ce verne publike biti posle ko zna koje predstave, ovaj put u našem gradu, uz mnogo uloženog truda i u najmanju scenu. Pitate se zašto baš Novi Sad a ne negde drugde? Znate, postoji trenutak u životu kada poželite da sebe ispitate u nekoj drugoj sredini, potpuno različitoj od one u kojoj ste bili. To je samo trenutak, a onda misao i napokon stvarnost. Grad drugačiji, pravi, gosti isti, više stotina onih koji su prošli kroz naš restoran tamo negde, pronašli nas i dali nam do znanja da smo dobrodošli baš ovde gde se spajaju različite kulture, običaji, arhitektura, kuhinje! Ovo je grad gde svakog možete zavoleti, a nadam se da ćemo i mi pronaći neki skriveni kutak u vašim srcima. Uz iskrenu želju da što više vas proba našu kuhinju, kao nešto novo, kvalitetno i neobično u gradu i obećanje da ću dati sve od sebe da poželite da se što pre vratite. Dobrodošli</p>
+    <img src="restaurant1.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Radno vreme:</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Ponedeljak - Subota 10:00 - 23:00</p>
+        <p>Nedelja 12:00 - 22:00</p>
+      </div>
+      <div class="w3-col s6">
+        <h1><b>Radno vreme dostave:</b></h1>
+        <p>11:00 - 23:00</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Contact (with google maps) -->
+<div id="googleMap" class="w3-grayscale-max" style="width:100%;height:400px;"></div>
+
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Kontakt</h1>
+      <p>Pronađite nas na našoj adresi, Cara Dušana 21a, ili nas pozovite na <span class="w3-tag">021/468-988</span> i <span class="w3-tag">063/171-25-60</span></p>
+    <p><span class="w3-tag">P.S.</span> Restoran koristi usluge brze, ažurne i tačne spoljne službe dostave (190 Rsd u gradu). Uz svaku dostavu preko 2000 Rsd dobijate flašu bistrog ili gaziranog soka GRATIS! Svaka dostava preko 3000 Rsd je besplatna!</p>
+    <p class="w3-xxlarge"><strong>Pošaljite nam</strong> Vaše sugestije, primedbe i pitanja:</p>
+    <form action="form.asp" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ime" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Vaša e-mail adresa" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Poruka" required name="Message"></p>
+      <p><button class="w3-btn-block w3-padding" type="submit">POŠALJI PORUKU</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+// Google Map Location
+var myCenter = new google.maps.LatLng(45.2467902, 19.8250427);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 15,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
 </html>
